@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Mona</title>
+  </head>
+  <body>
+    <!-- =====================================Header=============================== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="" class="nav__logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="209"
+            height="44"
+            viewBox="0 0 209 44"
+            fill="none"
+          >
+            <path
+              d="M163.744 12.1415L160.539 16.0103L163.8 19.8237C163.8 19.8237 174.052 8.30041 174.052 7.80301H170.487H167.309L163.744 12.1415Z"
+              fill="white"
+            ></path>
+            <path
+              d="M160.539 26.4559L163.689 30.3247L166.895 34.7461H174.19L163.855 22.7254L160.539 26.4559Z"
+              fill="white"
+            ></path>
+            <circle cx="159.503" cy="5.5234" r="2.6943" fill="white"></circle>
+            <path
+              d="M144.373 2L159.503 21.0674C152.947 29.2421 149.271 33.8253 142.715 42"
+              stroke="#FF7425"
+              stroke-width="5.02736"
+            ></path>
+            <rect
+              x="120.746"
+              y="18.9949"
+              width="24.0415"
+              height="4.55959"
+              fill="#FF7425"
+            ></rect>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M49.5955 25.7099H43.9997C43.9444 26.4008 44.0549 27.1745 44.3313 28.0312C44.6353 28.8878 45.1327 29.7445 45.8235 30.6011C46.5144 31.4578 47.4125 32.2453 48.5178 32.9638C49.6232 33.6823 50.9358 34.2626 52.4556 34.7047C53.9755 35.1192 55.7302 35.3265 57.7199 35.3265C60.5109 35.3265 62.7769 34.9949 64.5178 34.3317C66.2864 33.6685 67.5852 32.7427 68.4142 31.5545C69.2708 30.3386 69.6992 28.9154 69.6992 27.285C69.6992 25.9586 69.4505 24.8394 68.953 23.9275C68.4556 23.0156 67.7372 22.2695 66.7976 21.6892C65.8857 21.0812 64.7803 20.5977 63.4815 20.2384C62.2104 19.8515 60.7872 19.5476 59.2121 19.3265C57.5265 19.0778 56.1171 18.8291 54.9841 18.5804C53.8512 18.3317 52.953 18.0692 52.2898 17.7928C51.6266 17.5165 51.1568 17.1987 50.8805 16.8394C50.6042 16.4526 50.466 16.0104 50.466 15.513C50.466 14.2419 51.0325 13.3438 52.1655 12.8187C53.3261 12.2937 54.7907 12.0312 56.5593 12.0312C58.466 12.0312 60.0411 12.3904 61.2847 13.1089C62.5558 13.8274 63.2467 15.0018 63.3572 16.6322H68.7458C68.8011 13.7583 67.7786 11.5061 65.6784 9.87572C63.6059 8.21769 60.6353 7.38867 56.7665 7.38867C54.1966 7.38867 52.0273 7.72028 50.2587 8.38349C48.4902 9.0467 47.1499 9.97244 46.238 11.1607C45.3537 12.3489 44.9116 13.7306 44.9116 15.3058C44.9116 16.5769 45.2017 17.6823 45.7821 18.6218C46.39 19.5338 47.2052 20.3075 48.2277 20.9431C49.2777 21.5787 50.4798 22.1037 51.8339 22.5182C53.1879 22.9051 54.6249 23.2091 56.1448 23.4301C58.0791 23.7065 59.6404 23.9828 60.8287 24.2591C62.0169 24.5078 62.8874 24.8394 63.4401 25.254C63.9928 25.6408 64.2691 26.2073 64.2691 26.9534C64.2691 27.7272 64.048 28.3904 63.6059 28.9431C63.1638 29.4958 62.4867 29.9241 61.5748 30.2281C60.6629 30.532 59.5023 30.684 58.0929 30.684C56.5454 30.684 55.1499 30.4768 53.9064 30.0622C52.6629 29.6201 51.6543 29.026 50.8805 28.2799C50.1344 27.5061 49.7061 26.6495 49.5955 25.7099ZM0 23.718V19.2831H5.51286V12.4866L0 12.4866V7.92753H15.4611C19.0535 7.92753 21.7755 8.53548 23.6269 9.75137C25.506 10.9396 26.4456 12.722 26.4456 15.0985C26.4456 16.6184 26.0725 17.8205 25.3264 18.7047C24.5803 19.5614 23.5164 20.197 22.1347 20.6115C21.3143 20.8626 20.4026 21.058 19.3996 21.1975C20.0571 21.2463 20.6924 21.3135 21.3057 21.399C22.5216 21.5648 23.5855 21.8688 24.4974 22.311C25.4093 22.7531 26.1278 23.3749 26.6529 24.1762C27.1779 24.95 27.4404 25.9724 27.4404 27.2436C27.4404 28.9016 26.9983 30.2833 26.114 31.3887C25.2297 32.4664 24 33.2816 22.4249 33.8343C20.8497 34.3869 19.0259 34.6909 16.9534 34.7462H0V30.1866H5.51286V23.718H0ZM5.51295 30.1866H16.3731C18.114 30.1866 19.4542 29.9103 20.3938 29.3576C21.3333 28.7773 21.8031 27.8654 21.8031 26.6218C21.8031 25.7099 21.5268 25.0467 20.9741 24.6322C20.4214 24.2177 19.6891 23.969 18.7772 23.8861C17.8653 23.7755 16.8843 23.7203 15.8342 23.7203H5.51295V30.1866ZM5.51295 19.285H15.2539C16.9948 19.285 18.3351 19.0363 19.2746 18.5389C20.2142 18.0139 20.6839 17.1296 20.6839 15.8861C20.6839 14.6426 20.2142 13.7721 19.2746 13.2747C18.3351 12.7496 17.0915 12.4871 15.544 12.4871H5.51295V19.285ZM33.1305 7.92753H38.6435V34.7462H33.1305V7.92753ZM100.014 7.92753V27.5604L80.0758 7.92753H74.5628V34.7462H80.0758V15.2658L100.014 34.7462H105.527V7.92753H100.014ZM117.438 30.1451V23.5545L117.43 19.2021L117.438 19.2021V12.5286H138.081V7.92753H111.925V34.7462H138.122V30.1451H117.438ZM179.754 7.92753H208.023V12.5286H196.665V34.7462H191.153V12.5286H179.754V7.92753Z"
+              fill="white"
+            ></path>
+          </svg>
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                HOME<i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                PAGE<i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                BLOG<i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                PORTFOLIO<i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                SHOP<i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">
+                CONTACT<i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav__close" id="nav-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="nav__actions">
+          <i class="fa-solid fa-cart-plus nav__card"></i>
+          <i
+            class="fa-solid fa-magnifying-glass nav__search"
+            id="search-btn"
+          ></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="search" id="search">
+      <form action="" class="search__form">
+        <i class="fa-solid fa-magnifying-glass search__icon"></i>
+        <input
+          type="search"
+          placeholder="What are you looking for"
+          class="search__input"
+        />
+      </form>
+      <i class="fa-solid fa-xmark search__close" id="search-close"></i>
+    </div>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__img">
+            <img src="./assets/img/bg-banner.png" alt="img" />
+          </div>
+          <div class="home__data">
+            <h1 class="home__title">Business Solution by Digital</h1>
+            <div class="home__botton">
+              <div class="home__body">
+                <div class="home__desription">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do einusmod tempor incididunt ut labore et dolore manga.
+                  </p>
+                </div>
+                <div class="home__body-title">
+                  <h1>Agency</h1>
+                </div>
+              </div>
+            </div>
+            <div class="home__banner">
+              <div class="home__banner-slider">
+                <div class="home__slider">
+                  <div class="circle"></div>
+                  <div class="banner__silder">
+                    <img
+                      src="./assets/img/slider-img-banner-1.png"
+                      alt=""
+                      id="slide1"
+                    />
+                  </div>
+                  <!-- dots -->
+                  <div class="home__scroll">
+                    <span>01</span>
+                    <span>02</span>
+                  </div>
+                  <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="home__info">
+                <div class="info__title">
+                  <span>GET IN TOCH</span>
+                  <div class="circle"></div>
+                </div>
+                <div class="info__meta">
+                  <div class="info__img">
+                    <div class="info__user user-1">
+                      <img src="./assets/img/user-1.png" alt="" />
+                    </div>
+                    <div class="info__user user-2">
+                      <img src="assets/img/user-2.png" alt="" />
+                    </div>
+                    <div class="info__user user-3">
+                      <img src="assets/img/user-2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="info__title">
+                    <h1>240 Business Peoples</h1>
+                    <span>Already registered</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scroll">
+              <span>SCROLL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="brand section" id="brand">
+        <div class="brand__container container grid">
+          <div class="brand__img">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="74"
+              height="70"
+              viewBox="0 0 74 70"
+              fill="none"
+            >
+              <path
+                d="M69.8673 45.2735C74.0262 49.4324 74.0262 56.1907 69.8673 60.3496C65.7084 64.5085 58.9502 64.5085 54.7913 60.3496C50.6324 56.1907 43.8741 56.1907 39.7152 60.3496C35.5563 64.5085 28.7981 64.5085 24.6392 60.3496C20.4803 56.1907 20.4803 49.4324 24.6392 45.2735C28.7981 41.1146 35.5563 41.1146 39.7152 45.2735C43.8741 49.4324 50.6324 49.4324 54.7913 45.2735C58.9502 41.1146 65.7084 41.1146 69.8673 45.2735Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M21.9199 8.88325C23.4395 3.20475 29.278 -0.154293 34.9565 1.36531C40.635 2.88491 43.9941 8.72322 42.4745 14.4017C40.9549 20.0802 44.314 25.9189 49.9925 27.4385C55.671 28.9581 59.0302 34.7964 57.5106 40.4749C55.991 46.1535 50.1525 49.5125 44.474 47.9929C38.7955 46.4733 35.4364 40.635 36.956 34.9565C38.4756 29.278 35.1164 23.4397 29.4379 21.9201C23.7994 20.4005 20.4003 14.5618 21.9199 8.88325Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M14.4019 68.5876C8.72336 70.1072 2.8849 66.7482 1.3653 61.0697C-0.154298 55.3912 3.20481 49.5529 8.88332 48.0333C14.5618 46.5137 17.9209 40.675 16.4013 34.9965C14.8817 29.3179 18.2408 23.4796 23.9194 21.96C29.5979 20.4404 35.4363 23.7995 36.9559 29.478C38.4755 35.1565 35.1164 40.9952 29.4379 42.5148C23.7594 44.0344 20.4003 49.8727 21.9199 55.5512C23.4795 61.2297 20.0804 67.068 14.4019 68.5876Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+            </svg>
+          </div>
+          <div class="brand__title">
+            <p>OVER 2K+ SOFTWARE BUSINESS GROWING WITH OUR BUSINESS</p>
+          </div>
+          <div class="brand__logo">
+            <img src="./assets/img/2.png" alt="" />
+            <img src="./assets/img/3.png" alt="" />
+            <img src="./assets/img/4.png" alt="" />
+            <img src="./assets/img/5.png" alt="" />
+            <img src="./assets/img/2.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="features section" id="features">
+        <div class="features__container container grid">
+          <div class="feature__title">
+            <div class="feature__left">
+              <span>FEATURES</span>
+              <h1>Follow These Steps to Expand Your Business</h1>
+            </div>
+            <div class="feature__right">
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eisumod tempor incididunt ut labore et dolor.</span
+              >
+              <div class="feature__right-butoon">
+                <a href="#">VIEW ALL FEATURE</a>
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="feature__body">
+            <div class="img__vector">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="106"
+                height="76"
+                viewBox="0 0 106 76"
+                fill="none"
+              >
+                <path
+                  d="M60.4533 75.2444H30.7556V45.547H60.4533C68.6578 45.547 75.3022 38.9024 75.3022 30.698H105C105 55.3113 85.0667 75.2444 60.4533 75.2444Z"
+                  stroke="white"
+                  stroke-opacity="0.15"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M45.5467 1H75.2444V30.698H45.5467C37.3422 30.698 30.6978 37.3426 30.6978 45.547H1C1 20.9337 20.9333 1 45.5467 1Z"
+                  stroke="white"
+                  stroke-opacity="0.15"
+                  stroke-miterlimit="10"
+                ></path>
+              </svg>
+            </div>
+            <div class="feature__img img1">
+              <div class="featutre__img-hover">
+                <img src="./assets/img/image 6.png" alt="" />
+                <a href="" class="hovar">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#FFFFFF"
+                  >
+                    <path
+                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p>Digital Agency</p>
+            </div>
+            <div class="feature__img img2">
+              <div class="featutre__img-hover">
+                <img src="./assets/img/image 7.png" alt="" />
+                <a href="" class="hovar">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#FFFFFF"
+                  >
+                    <path
+                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p>Web Development</p>
+            </div>
+            <div class="feature__img img3">
+              <div class="featutre__img-hover">
+                <img src="./assets/img/image 8.png" alt="" />
+                <a href="" class="hovar">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#FFFFFF"
+                  >
+                    <path
+                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p>Custom Solution</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__img">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="74"
+              height="70"
+              viewBox="0 0 74 70"
+              fill="none"
+            >
+              <path
+                d="M69.8673 45.2735C74.0262 49.4324 74.0262 56.1907 69.8673 60.3496C65.7084 64.5085 58.9502 64.5085 54.7913 60.3496C50.6324 56.1907 43.8741 56.1907 39.7152 60.3496C35.5563 64.5085 28.7981 64.5085 24.6392 60.3496C20.4803 56.1907 20.4803 49.4324 24.6392 45.2735C28.7981 41.1146 35.5563 41.1146 39.7152 45.2735C43.8741 49.4324 50.6324 49.4324 54.7913 45.2735C58.9502 41.1146 65.7084 41.1146 69.8673 45.2735Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M21.9199 8.88325C23.4395 3.20475 29.278 -0.154293 34.9565 1.36531C40.635 2.88491 43.9941 8.72322 42.4745 14.4017C40.9549 20.0802 44.314 25.9189 49.9925 27.4385C55.671 28.9581 59.0302 34.7964 57.5106 40.4749C55.991 46.1535 50.1525 49.5125 44.474 47.9929C38.7955 46.4733 35.4364 40.635 36.956 34.9565C38.4756 29.278 35.1164 23.4397 29.4379 21.9201C23.7994 20.4005 20.4003 14.5618 21.9199 8.88325Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M14.4019 68.5876C8.72336 70.1072 2.8849 66.7482 1.3653 61.0697C-0.154298 55.3912 3.20481 49.5529 8.88332 48.0333C14.5618 46.5137 17.9209 40.675 16.4013 34.9965C14.8817 29.3179 18.2408 23.4796 23.9194 21.96C29.5979 20.4404 35.4363 23.7995 36.9559 29.478C38.4755 35.1565 35.1164 40.9952 29.4379 42.5148C23.7594 44.0344 20.4003 49.8727 21.9199 55.5512C23.4795 61.2297 20.0804 67.068 14.4019 68.5876Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+            </svg>
+          </div>
+          <div class="about__main">
+            <div class="about__main-img-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="151"
+                height="101"
+                viewBox="0 0 151 101"
+                fill="none"
+              >
+                <path
+                  d="M50 100.084C63.8 100.084 75 88.884 75 75.084V25.084C75 38.884 63.8 50.084 50 50.084"
+                  fill="#FF7425"
+                ></path>
+                <path d="M50 50.084H0V100.084H50V50.084Z" fill="#FF7425"></path>
+                <path
+                  d="M100 0.0839844C86.2 0.0839844 75 11.284 75 25.084V75.084C75 61.284 86.2 50.084 100 50.084"
+                  fill="#FF7425"
+                ></path>
+                <path
+                  d="M100.001 50L150.001 50V0L100.001 0V50Z"
+                  fill="#FF7425"
+                ></path>
+              </svg>
+            </div>
+            <div class="about__main-img-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="200"
+                height="200"
+                viewBox="0 0 200 200"
+                fill="none"
+              >
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="90"
+                  stroke="#FF7425"
+                  stroke-width="20"
+                ></circle>
+              </svg>
+            </div>
+            <img
+              src="./assets/img/image 9.png"
+              alt=""
+              class="about__main-img"
+            />
+            <div class="about__main-video">
+              <img src="./assets/img/image 10.png" alt="" />
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <div class="about__detail">
+            <div class="about__title">
+              <p>ABOUT US</p>
+              <h1>We Are Creative Digital Marketing Agency</h1>
+            </div>
+            <div class="about__content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                emnim ad minim veniam. quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute iure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fufiat
+                nulla pari atur.
+              </p>
+              <div class="about__check-text">
+                <div class="check-text">
+                  <i class="fa-solid fa-check"></i>
+                  <p>Sed ut perspiciatis unde omnis iste natus erro</p>
+                </div>
+                <div class="check-text">
+                  <i class="fa-solid fa-check"></i>
+                  <p>Totam rem aperiam, eaque ipsa quae ab illo</p>
+                </div>
+                <div class="check-text">
+                  <i class="fa-solid fa-check"></i>
+                  <p>But i must explain to you how all this mistaken idea</p>
+                </div>
+                <div class="check-text">
+                  <i class="fa-solid fa-check"></i>
+                  <p>At vero eos et accusamus et iusto odio dignissimos</p>
+                </div>
+              </div>
+              <div class="about__data grid">
+                <div class="about__data-detail">
+                  <h1>120%</h1>
+                  <p>Increase in sales</p>
+                </div>
+                <div class="about__data-detail">
+                  <h1>250%</h1>
+                  <p>Customer Engagement</p>
+                </div>
+                <div class="about__data-detail">
+                  <h1>100%</h1>
+                  <p>Customer Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ourValue section" id="ourValue">
+        <div class="ourValue__container container grid">
+          <div class="ourValue__data">
+            <div class="ourValue__value-data">
+              <h1>100+</h1>
+              <div class="ourValue__value-text">
+                <h2>Project Complete</h2>
+                <p>
+                  On the other hand, we denounce with righteous indignation and
+                  dislike men who
+                </p>
+              </div>
+            </div>
+            <div class="ourValue__value-data">
+              <h1>3290</h1>
+              <div class="ourValue__value-text">
+                <h2>Creative Ideas</h2>
+                <p>
+                  On the other hand, we denounce with righteous indignation and
+                  dislike men who
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ourValue__content">
+            <p>OUR VALUE</p>
+            <h1>Successful Experience Project Matters</h1>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam</span
+            >
+            <div class="ourValue__button">
+              <div class="ourValue__button-1">
+                <a href="#">VIEW ALL VALUE</a>
+              </div>
+              <div class="ourValue__button-2">
+                <i class="fa-solid fa-play"></i>
+                <a href="#">WATCH VIDEO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio section" id="portfolio">
+        <div class="portfolio__container container grid">
+          <div class="portfolio__title">
+            <p>PORTFOLIO</p>
+            <h1>We Work to Craft Solid Products and Services For You</h1>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.</span
+            >
+            <div class="portfolio__title-button">
+              <a href="#">VIEW ALL PORTFOLIO</a>
+            </div>
+          </div>
+          <div class="portfolio__list">
+            <div class="portfolio__list-img">
+              <img src="/assets/img/image 13.png" alt="" />
+            </div>
+            <div class="portfolio__list-items">
+              <ul>
+                <li class="portfolio__list-item">
+                  <div class="portfolio__list-header">
+                    <div class="portfolio__list-content">
+                      <div class="portfolio__list-number">
+                        <h1>01</h1>
+                        <span>/</span>
+                      </div>
+                      <h1 class="portfolio__list-text">Digital Agency</h1>
+                      <p>/Brand - Consultation</p>
+                    </div>
+                    <div class="portfolio__list-button">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="portfolio__list-item-text">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium voluptatum deleniti atque
+                      corrupti quos dolores et quas molestias excepturi sint
+                      occaecati cupiditate non provident.
+                    </p>
+                  </div>
+                </li>
+                <li class="portfolio__list-item">
+                  <div class="portfolio__list-header">
+                    <div class="portfolio__list-content">
+                      <div class="portfolio__list-number">
+                        <h1>02</h1>
+                        <span>/</span>
+                      </div>
+                      <h1 class="portfolio__list-text">Business Idea</h1>
+                      <p>/Consultation - Idea</p>
+                    </div>
+                    <div class="portfolio__list-button">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="portfolio__list-item-text">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium voluptatum deleniti atque
+                      corrupti quos dolores et quas molestias excepturi sint
+                      occaecati cupiditate non provident.
+                    </p>
+                  </div>
+                </li>
+                <li class="portfolio__list-item">
+                  <div class="portfolio__list-header">
+                    <div class="portfolio__list-content">
+                      <div class="portfolio__list-number">
+                        <h1>03</h1>
+                        <span>/</span>
+                      </div>
+                      <h1 class="portfolio__list-text">Marketing Analysis</h1>
+                      <p>/Design - Brand</p>
+                    </div>
+                    <div class="portfolio__list-button">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="portfolio__list-item-text">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium voluptatum deleniti atque
+                      corrupti quos dolores et quas molestias excepturi sint
+                      occaecati cupiditate non provident.
+                    </p>
+                  </div>
+                </li>
+                <li class="portfolio__list-item">
+                  <div class="portfolio__list-header">
+                    <div class="portfolio__list-content">
+                      <div class="portfolio__list-number">
+                        <h1>04</h1>
+                        <span>/</span>
+                      </div>
+                      <h1 class="portfolio__list-text">Bisnext Busuness</h1>
+                      <p>/Agency - Business</p>
+                    </div>
+                    <div class="portfolio__list-button">
+                      <span>+</span>
+                    </div>
+                  </div>
+                  <div class="portfolio__list-item-text">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium voluptatum deleniti atque
+                      corrupti quos dolores et quas molestias excepturi sint
+                      occaecati cupiditate non provident.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials section" id="testimonials">
+        <div class="testimonials__container container grid">
+          <div class="testimonials__svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="106"
+              height="76"
+              viewBox="0 0 106 76"
+              fill="none"
+            >
+              <path
+                d="M60.4533 75.2444H30.7556V45.547H60.4533C68.6578 45.547 75.3022 38.9024 75.3022 30.698H105C105 55.3113 85.0667 75.2444 60.4533 75.2444Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M45.5467 1H75.2444V30.698H45.5467C37.3422 30.698 30.6978 37.3426 30.6978 45.547H1C1 20.9337 20.9333 1 45.5467 1Z"
+                stroke="white"
+                stroke-opacity="0.15"
+                stroke-miterlimit="10"
+              ></path>
+            </svg>
+          </div>
+          <div class="testimonials__img">
+            <img src="assets/img/image 14.png" alt="" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="88"
+              height="88"
+              viewBox="0 0 88 88"
+              fill="none"
+            >
+              <path
+                d="M58.6667 0H29.3333C29.3333 16.1822 16.1822 29.3333 0 29.3333V58.6667C32.4133 58.6667 58.6667 32.4133 58.6667 0Z"
+                fill="#FF7425"
+              ></path>
+              <path
+                d="M88 29.3334V58.6667C71.8178 58.6667 58.6667 71.8178 58.6667 88H29.3333C29.3333 55.5867 55.5867 29.3334 88 29.3334Z"
+                fill="#FF7425"
+              ></path>
+            </svg>
+          </div>
+          <div class="testimonials__content">
+            <div class="testimonials__silder">
+              <div class="testimonials__silder-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 42 30"
+                  fill="none"
+                >
+                  <path
+                    d="M41.3695 29.8283C41.5582 29.7303 41.7469 29.5422 41.8454 29.3461C42.0095 29.0273 42.0095 28.9128 41.9931 20.812C41.9684 12.6621 41.9684 12.5967 41.7961 12.376C41.7059 12.2534 41.5254 12.0736 41.4023 11.9837C41.1808 11.8202 41.0659 11.812 37.6608 11.7875L34.1409 11.7629L34.1163 6.31063C34.0917 0.866486 34.0917 0.858312 33.9112 0.572208C33.5583 0.00817513 33.5255 7.40862e-07 30.8589 9.73985e-07L28.4713 1.18272e-06L28.1513 0.294279C27.8313 0.580383 27.7985 0.662127 25.7636 6.7357L23.7124 12.891L23.7288 21.0327C23.7534 29.109 23.7534 29.1744 23.9257 29.3951C24.016 29.5177 24.1965 29.6976 24.3196 29.7875C24.5411 29.9591 24.6067 29.9591 32.8035 29.9755C40.9018 29.9918 41.0741 29.9918 41.3695 29.8283Z"
+                    fill="#FF7425"
+                  ></path>
+                  <path
+                    d="M17.5176 29.8858C17.854 29.7386 18.1986 29.3217 18.2561 28.9948C18.2807 28.8476 18.2889 25.1038 18.2807 20.6651C18.2561 12.6623 18.2561 12.5969 18.0838 12.3762C17.9935 12.2536 17.813 12.0738 17.6899 11.9839C17.4684 11.8204 17.3535 11.8122 13.8992 11.7877L10.3383 11.7632L10.3219 6.21274L10.2972 0.654159L9.98545 0.351707L9.68187 0.0410802L7.2614 0.0165572C4.57838 -0.00796569 4.49633 0.00838309 4.18454 0.515195C4.09428 0.662334 3.11789 3.4825 2.01022 6.78495L1.11827e-06 12.8013L1.82718e-06 20.9103C2.52394e-06 28.8803 2.53681e-06 29.0275 0.164103 29.3463C0.270768 29.5588 0.443072 29.7305 0.656401 29.8367C0.976395 30.0002 1.11588 30.0002 9.12393 30.0002C15.7125 29.992 17.3207 29.9757 17.5176 29.8858Z"
+                    fill="#FF7425"
+                  ></path>
+                </svg>
+                <p>
+                  "But I must explain to you how all this mistaken idea of
+                  denouncing pleasure and praising pain was born and I will give
+                  tou a complete account of the system, and expound the actual
+                  teachings of the great explorer of the truth human happiness.
+                  No one rejects."
+                </p>
+
+                <div class="testimonials__user">
+                  <div class="testimonials__user-img">
+                    <img src="assets/img/image 15.png" alt="" />
+                  </div>
+                  <div class="testimonials__user-title">
+                    <h2>Chester Feil</h2>
+                    <p>CUSTOMER</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonials__btn">
+                <button class="testimonials__btn-left">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="testimonials__btn-right">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="newsletter section" id="newsletter">
+        <div class="newsletter__container container grid">
+          <h1>Let's Make Something Great Together!</h1>
+          <div class="newsletter__btn">
+            <a href="#">
+              <p>CONTACT WITH US</p>
+              <svg
+                class="hidden-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#FFFFFF"
+              >
+                <path
+                  d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="faqs section" id="faqs">
+        <div class="faqs__container container grid">
+          <div class="faqs__question">
+            <div class="faqs__question-item">
+              <div class="faqs__poser">
+                <p>How can we help your business?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faqs__answer"></div>
+            </div>
+            <div class="faqs__question-item">
+              <div class="faqs__poser">
+                <p>what are the advantages of Bisnext</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faqs__answer"></div>
+            </div>
+            <div class="faqs__question-item">
+              <div class="faqs__poser">
+                <p>Let's find an office near you?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faqs__answer"></div>
+            </div>
+            <div class="faqs__question-item">
+              <div class="faqs__poser">
+                <p>How It consultancy exprets work?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faqs__answer"></div>
+            </div>
+          </div>
+          <div class="faqs__content">
+            <p>PORTFOLIO</p>
+            <h1>Be Kind to Your Mind Question & Answer</h1>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, qui nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.</span
+            >
+            <div class="faqs__btn">
+              <a href="#">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blog section" id="blog">
+        <div class="blog__container container grid">
+          <div class="blog__title grid">
+            <div class="blog__title-left">
+              <p>LATEST BLOG</p>
+              <h1>Check Some Of Latest News & Articles</h1>
+            </div>
+            <div class="blog__title-right">
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididint ut labore et dolore.</span
+              >
+              <div class="blog__title-btn">
+                <a href="#">VIEW ALL BLOG</a>
+              </div>
+            </div>
+          </div>
+          <div class="blog__post grid">
+            <div class="blog__post-item">
+              <div class="blog__post-img">
+                <img src="assets/img/image 16.png" alt="" />
+              </div>
+              <div class="blog__post-content">
+                <div class="blog__post-meta">
+                  <span>UI Desing</span> | <span>15 Dec 2022</span>
+                </div>
+                <h1>What is Digital Agency Marketing</h1>
+                <span
+                  >But I must explain to you how all this mistaken idea of
+                  denoicing pleasure and praising pain was born and I will give
+                  you a complete account of the system</span
+                >
+                <div class="blog__post-btn">
+                  <a href="#">READ MORE</a>
+                  <svg
+                    class="hidden-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#FFFFFF"
+                  >
+                    <path
+                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="blog__post-item">
+              <div class="blog__post-img">
+                <img src="assets/img/image 17.png" alt="" />
+              </div>
+              <div class="blog__post-content">
+                <div class="blog__post-meta">
+                  <span>UI Desing</span> | <span>15 Dec 2022</span>
+                </div>
+                <h1>What is Digital Agency Marketing</h1>
+                <span
+                  >But I must explain to you how all this mistaken idea of
+                  denoicing pleasure and praising pain was born and I will give
+                  you a complete account of the system</span
+                >
+                <div class="blog__post-btn">
+                  <a href="#">READ MORE</a>
+                  <svg
+                    class="hidden-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#FFFFFF"
+                  >
+                    <path
+                      d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer_container container grid">
+        <div class="grid">
+          <div class="footer__logo">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="209"
+                height="44"
+                viewBox="0 0 209 44"
+                fill="none"
+              >
+                <path
+                  d="M163.744 12.1415L160.539 16.0103L163.8 19.8237C163.8 19.8237 174.052 8.30041 174.052 7.80301H170.487H167.309L163.744 12.1415Z"
+                  fill="white"
+                ></path>
+                <path
+                  d="M160.539 26.4559L163.689 30.3247L166.895 34.7461H174.19L163.855 22.7254L160.539 26.4559Z"
+                  fill="white"
+                ></path>
+                <circle
+                  cx="159.503"
+                  cy="5.5234"
+                  r="2.6943"
+                  fill="white"
+                ></circle>
+                <path
+                  d="M144.373 2L159.503 21.0674C152.947 29.2421 149.271 33.8253 142.715 42"
+                  stroke="#FF7425"
+                  stroke-width="5.02736"
+                ></path>
+                <rect
+                  x="120.746"
+                  y="18.9949"
+                  width="24.0415"
+                  height="4.55959"
+                  fill="#FF7425"
+                ></rect>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M49.5955 25.7099H43.9997C43.9444 26.4008 44.0549 27.1745 44.3313 28.0312C44.6353 28.8878 45.1327 29.7445 45.8235 30.6011C46.5144 31.4578 47.4125 32.2453 48.5178 32.9638C49.6232 33.6823 50.9358 34.2626 52.4556 34.7047C53.9755 35.1192 55.7302 35.3265 57.7199 35.3265C60.5109 35.3265 62.7769 34.9949 64.5178 34.3317C66.2864 33.6685 67.5852 32.7427 68.4142 31.5545C69.2708 30.3386 69.6992 28.9154 69.6992 27.285C69.6992 25.9586 69.4505 24.8394 68.953 23.9275C68.4556 23.0156 67.7372 22.2695 66.7976 21.6892C65.8857 21.0812 64.7803 20.5977 63.4815 20.2384C62.2104 19.8515 60.7872 19.5476 59.2121 19.3265C57.5265 19.0778 56.1171 18.8291 54.9841 18.5804C53.8512 18.3317 52.953 18.0692 52.2898 17.7928C51.6266 17.5165 51.1568 17.1987 50.8805 16.8394C50.6042 16.4526 50.466 16.0104 50.466 15.513C50.466 14.2419 51.0325 13.3438 52.1655 12.8187C53.3261 12.2937 54.7907 12.0312 56.5593 12.0312C58.466 12.0312 60.0411 12.3904 61.2847 13.1089C62.5558 13.8274 63.2467 15.0018 63.3572 16.6322H68.7458C68.8011 13.7583 67.7786 11.5061 65.6784 9.87572C63.6059 8.21769 60.6353 7.38867 56.7665 7.38867C54.1966 7.38867 52.0273 7.72028 50.2587 8.38349C48.4902 9.0467 47.1499 9.97244 46.238 11.1607C45.3537 12.3489 44.9116 13.7306 44.9116 15.3058C44.9116 16.5769 45.2017 17.6823 45.7821 18.6218C46.39 19.5338 47.2052 20.3075 48.2277 20.9431C49.2777 21.5787 50.4798 22.1037 51.8339 22.5182C53.1879 22.9051 54.6249 23.2091 56.1448 23.4301C58.0791 23.7065 59.6404 23.9828 60.8287 24.2591C62.0169 24.5078 62.8874 24.8394 63.4401 25.254C63.9928 25.6408 64.2691 26.2073 64.2691 26.9534C64.2691 27.7272 64.048 28.3904 63.6059 28.9431C63.1638 29.4958 62.4867 29.9241 61.5748 30.2281C60.6629 30.532 59.5023 30.684 58.0929 30.684C56.5454 30.684 55.1499 30.4768 53.9064 30.0622C52.6629 29.6201 51.6543 29.026 50.8805 28.2799C50.1344 27.5061 49.7061 26.6495 49.5955 25.7099ZM0 23.718V19.2831H5.51286V12.4866L0 12.4866V7.92753H15.4611C19.0535 7.92753 21.7755 8.53548 23.6269 9.75137C25.506 10.9396 26.4456 12.722 26.4456 15.0985C26.4456 16.6184 26.0725 17.8205 25.3264 18.7047C24.5803 19.5614 23.5164 20.197 22.1347 20.6115C21.3143 20.8626 20.4026 21.058 19.3996 21.1975C20.0571 21.2463 20.6924 21.3135 21.3057 21.399C22.5216 21.5648 23.5855 21.8688 24.4974 22.311C25.4093 22.7531 26.1278 23.3749 26.6529 24.1762C27.1779 24.95 27.4404 25.9724 27.4404 27.2436C27.4404 28.9016 26.9983 30.2833 26.114 31.3887C25.2297 32.4664 24 33.2816 22.4249 33.8343C20.8497 34.3869 19.0259 34.6909 16.9534 34.7462H0V30.1866H5.51286V23.718H0ZM5.51295 30.1866H16.3731C18.114 30.1866 19.4542 29.9103 20.3938 29.3576C21.3333 28.7773 21.8031 27.8654 21.8031 26.6218C21.8031 25.7099 21.5268 25.0467 20.9741 24.6322C20.4214 24.2177 19.6891 23.969 18.7772 23.8861C17.8653 23.7755 16.8843 23.7203 15.8342 23.7203H5.51295V30.1866ZM5.51295 19.285H15.2539C16.9948 19.285 18.3351 19.0363 19.2746 18.5389C20.2142 18.0139 20.6839 17.1296 20.6839 15.8861C20.6839 14.6426 20.2142 13.7721 19.2746 13.2747C18.3351 12.7496 17.0915 12.4871 15.544 12.4871H5.51295V19.285ZM33.1305 7.92753H38.6435V34.7462H33.1305V7.92753ZM100.014 7.92753V27.5604L80.0758 7.92753H74.5628V34.7462H80.0758V15.2658L100.014 34.7462H105.527V7.92753H100.014ZM117.438 30.1451V23.5545L117.43 19.2021L117.438 19.2021V12.5286H138.081V7.92753H111.925V34.7462H138.122V30.1451H117.438ZM179.754 7.92753H208.023V12.5286H196.665V34.7462H191.153V12.5286H179.754V7.92753Z"
+                  fill="white"
+                ></path>
+              </svg>
+            </a>
+            <span>
+              Lorem ipsum dolor sit amet consecte tur adipising elit, sed do
+              eisumod tempor incididut ut abore et dolore magna aliqua tepo the.
+            </span>
+            <div class="footer__logo-btn">
+              <a href="">
+                <i class="fa-solid fa-phone"></i>
+                (973) 068 2300
+              </a>
+            </div>
+          </div>
+          <div class="footer__link">
+            <h1>QUICK LINKS</h1>
+            <div>
+              <ul class="footer__text">
+                <li><a href="#">Ablout Us</a></li>
+                <li><a href="#">Case Studes</a></li>
+                <li><a href="#">Pricing Table</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Meet Our Team</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Latest News</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__social">
+            <ul>
+              <li>
+                <a href="#">Facebook</a>
+                <p>|</p>
+              </li>
+              <li>
+                <a href="#">Twitter</a>
+                <p>|</p>
+              </li>
+              <li>
+                <a href="#">Dribbble</a>
+                <p>|</p>
+              </li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="footer__mail">
+            <h1>Let's work together.</h1>
+            <div>
+              <span>Just drop me aline - <a href="#">info@mail.com</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
