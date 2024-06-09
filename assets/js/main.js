@@ -91,35 +91,66 @@ document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count, .count-percent");
   const speed = 50; // The lower the number, the faster the count
 
-  counters.forEach((counter) => {
-    const updateCount = () => {
-      const target = +counter.getAttribute("data-target");
-      let count = +counter.innerText.replace(/[^\d]/g, ""); // Remove non-numeric characters
+  const updateCount = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = +counter.innerText.replace(/[^\d]/g, ""); // Remove non-numeric characters
 
-      const increment = target / speed;
+    const increment = target / speed;
 
+    const countToTarget = () => {
       if (count < target) {
         count = Math.ceil(count + increment);
         if (counter.classList.contains("count")) {
-          counter.innerText = counter.innerText.includes("+")
-            ? `${count}+`
-            : `${count}`;
+          counter.innerText =
+            counter.getAttribute("data-has-plus") === "true"
+              ? `${count}+`
+              : `${count}`;
         } else if (counter.classList.contains("count-percent")) {
           counter.innerText = `${count}%`;
         }
-        setTimeout(updateCount, 20);
+        setTimeout(countToTarget, 20);
       } else {
         if (counter.classList.contains("count")) {
-          counter.innerText = counter.innerText.includes("+")
-            ? `${target}+`
-            : `${target}`;
+          counter.innerText =
+            counter.getAttribute("data-has-plus") === "true"
+              ? `${target}+`
+              : `${target}`;
         } else if (counter.classList.contains("count-percent")) {
           counter.innerText = `${target}%`;
         }
       }
     };
 
-    updateCount();
+    countToTarget();
+  };
+
+  const observerOptions = {
+    root: null, // viewport
+    rootMargin: "0px",
+    threshold: 0.1, // trigger when at least 10% of the element is visible
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        // Reset to 0 with + if it initially contained +
+        const hasPlus = counter.innerText.includes("+");
+        counter.setAttribute("data-has-plus", hasPlus);
+        counter.innerText = counter.classList.contains("count-percent")
+          ? "0%"
+          : hasPlus
+          ? "0+"
+          : "0";
+        updateCount(counter);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  counters.forEach((counter) => {
+    observer.observe(counter);
   });
 });
 
