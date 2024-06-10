@@ -18,6 +18,18 @@ if (navClose) {
 
 // ==========SEARCH============
 
+const search = document.getElementById("search"),
+  searchBtn = document.getElementById("search-btn"),
+  searchClose = document.getElementById("search-close");
+
+searchBtn.addEventListener("click", () => {
+  search.classList.add("show-search");
+});
+
+searchClose.addEventListener("click", () => {
+  search.classList.remove("show-search");
+});
+
 // ==========Plus==========
 
 const buttons = document.querySelectorAll(".portfolio__list-button");
@@ -32,6 +44,27 @@ buttons.forEach((button) => {
     // Thay đổi dấu hiển thị giữa dấu cộng và dấu trừ
     const icon = button.querySelector("span");
     icon.textContent = icon.textContent === "+" ? "-" : "+";
+  });
+});
+
+// ============show faqs============
+
+document.querySelectorAll(".faqs__poser").forEach(function (poser) {
+  poser.addEventListener("click", function () {
+    const answer = this.nextElementSibling;
+    const parentItem = this.parentElement;
+
+    if (answer.classList.contains("show")) {
+      answer.classList.remove("show");
+      parentItem.classList.remove("expanded");
+    } else {
+      document.querySelectorAll(".faqs__answer").forEach(function (ans) {
+        ans.classList.remove("show");
+        ans.parentElement.classList.remove("expanded");
+      });
+      answer.classList.add("show");
+      parentItem.classList.add("expanded");
+    }
   });
 });
 
@@ -159,23 +192,20 @@ document.addEventListener("DOMContentLoaded", () => {
 const sr = ScrollReveal({
   origin: "top", // hướng đổ
   distance: "100px", //khoản cách đổ
-  duration: 2500, //  tốc độ
+  duration: 2000, //  tốc độ
   delay: 300, // thời gian hiển thị
   // interval: 100, // các phần tử
   reset: true,
 });
 
 sr.reveal(
-  ".home__title, .new__data, .care__img, .contact__content, .footer, .about__title, .blog__post-img"
+  ".home__title, .new__data, .care__img, .contact__content, .footer, .about__title, .blog__post-img, .about__main-img-1"
 );
-// sr.reveal(".home__data, .care__list, .contact__img", { delay: 500 });
-// sr.reveal(".new__card", { delay: 500, interval: 100 });
-// sr.reveal(".shop__card", { interval: 100 });
 
 const srLeft = ScrollReveal({
   origin: "left", // hướng đổ
   distance: "100px", //khoản cách đổ
-  duration: 2500, //  tốc độ
+  duration: 2000, //  tốc độ
   delay: 300, // thời gian hiển thị
   // interval: 100, // các phần tử
   reset: true,
@@ -188,19 +218,19 @@ srLeft.reveal(
 const srRight = ScrollReveal({
   origin: "right", // hướng đổ
   distance: "100px", //khoản cách đổ
-  duration: 2500, //  tốc độ
+  duration: 2000, //  tốc độ
   delay: 300, // thời gian hiển thị
   reset: true,
 });
 
 srLeft.reveal(
-  ".home__body-title, .home__info, .brand__logo, .feature__right, .about__main-video, .ourValue__content, .portfolio__list-items, .testimonials__silder-item p, .newsletter__btn, .faqs__content, .blog__title-right"
+  ".home__body-title, .home__info, .brand__logo, .feature__right, .about__main-video, .ourValue__content, .portfolio__list-items, .testimonials__silder-item p, .newsletter__btn, .faqs__content, .blog__title-right, .feature__img p, .testimonials__silder-item"
 );
 
 const srBotton = ScrollReveal({
   origin: "botton", // hướng đổ
   distance: "100px", //khoản cách đổ
-  duration: 2500, //  tốc độ
+  duration: 2000, //  tốc độ
   delay: 300, // thời gian hiển thị
   reset: true,
 });
@@ -210,7 +240,7 @@ srBotton.reveal(".scroll, .testimonials__btn");
 const srZoom = ScrollReveal({
   origin: "scroll",
   distance: "0px",
-  duration: 2500,
+  duration: 2000,
   delay: 300,
   scale: 0.85,
   reset: true,
@@ -223,7 +253,7 @@ srLeft.reveal(
 const srZoomRotate = ScrollReveal({
   origin: "scroll",
   distance: "0px",
-  duration: 2500,
+  duration: 2000,
   delay: 300,
   scale: 0.85,
   rotate: { x: 0, y: 0, z: -45 }, // Thêm hiệu ứng xoay 45 độ theo trục z
@@ -231,5 +261,5 @@ const srZoomRotate = ScrollReveal({
 });
 
 srZoomRotate.reveal(
-  ".testimonials__img, .testimonials__user, .blog__post-content"
+  ".testimonials__img, .testimonials__user, .blog__post-content, .about__main-img-2"
 );
