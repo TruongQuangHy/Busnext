@@ -225,6 +225,7 @@ svg {
   color: var(--first-color);
 }
 .show-menu {
+  z-index: 2;
   right: 0;
 }
 
