@@ -10,6 +10,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Mona</title>
   </head>
@@ -140,7 +144,38 @@
               </div>
             </div>
             <div class="home__banner">
-              <div class="home__banner-slider">
+              <div class="wrapper">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img
+                      src="./assets/img/slider-img-banner-1.png"
+                      alt=""
+                      id="slide1"
+                    /></div>
+                    <div class="swiper-slide"><img
+                      src="./assets/img/slider-img-banner-1.png"
+                      alt=""
+                      id="slide1"
+                    /></div>
+                    <div class="swiper-slide"><img
+                      src="./assets/img/slider-img-banner-1.png"
+                      alt=""
+                      id="slide1"
+                    /></div>
+                    ...
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+                
+                  
+                
+                  <!-- If we need scrollbar -->
+                  <div class="swiper-scrollbar"></div>
+                </div>
+              </div>
+
+              <!-- <div class="home__banner-slider">
                 <div class="home__slider">
                   <div class="circle"></div>
                   <div class="banner__silder">
@@ -150,7 +185,6 @@
                       id="slide1"
                     />
                   </div>
-                  <!-- dots -->
                   <div class="home__scroll">
                     <span>01</span>
                     <span>02</span>
@@ -160,7 +194,9 @@
                     <li></li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
+
+
               <div class="home__info">
                 <div class="info__title">
                   <span>GET IN TOUCH</span>
@@ -991,6 +1027,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
