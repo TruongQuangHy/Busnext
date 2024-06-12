@@ -28,20 +28,19 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 
+  mousewheel: true,
+});
+
+const horizontalSwiper = new Swiper(".swiper", {
+  // direction: "horizontal",
+  loop: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  mousewheel: true,
+  allowTouchMove: false,
+  mousewheel: false,
 });
-
-// const horizontalSwiper = new Swiper(".swiper", {
-//   // direction: "horizontal",
-//   loop: false,
-
-//   // allowTouchMove: false,
-//   // mousewheel: false,
-// });
 
 // ==========SEARCH============
 
@@ -113,39 +112,6 @@ const blurHeader = () => {
     : header.classList.remove("blur-header");
 };
 window.addEventListener("scroll", blurHeader);
-
-/*=============== SHOW SCROLL UP ===============*/
-
-// const scrollUP = () => {
-//   const scrollUP = document.getElementById("scroll-up");
-//   this.scrollY >= 350
-//     ? scrollUP.classList.add("show-scroll")
-//     : scrollUP.classList.remove("show-scroll");
-// };
-
-// window.addEventListener("scroll", scrollUP);
-
-// const sections = document.querySelectorAll("section[id]");
-
-// const scrollActive = () => {
-//   const scrollDown = window.scrollY;
-
-//   sections.forEach((current) => {
-//     const sectionHeight = current.offsetHeight,
-//       sectionTop = current.offsetTop - 58,
-//       sectionId = current.getAttribute("id"),
-//       sectionsClass = document.querySelector(
-//         ".nav__menu a[href*=" + sectionId + "]"
-//       );
-
-//     if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-//       sectionsClass.classList.add("active-link");
-//     } else {
-//       sectionsClass.classList.remove("active-link");
-//     }
-//   });
-// };
-// window.addEventListener("scroll", scrollActive);
 
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count, .count-percent");
@@ -251,7 +217,7 @@ const srRight = ScrollReveal({
 });
 
 srLeft.reveal(
-  ".home__body-title, .home__info, .brand__logo, .feature__right, .about__main-video, .ourValue__content, .portfolio__list-items, .testimonials__silder-item p, .newsletter__btn, .faqs__content, .blog__title-right, .feature__img p, .testimonials__silder-item"
+  ".home__body-title, .home__info, .brand__logo, .feature__right, .about__main-video, .ourValue__content, .portfolio__list-items, .newsletter__btn, .faqs__content, .blog__title-right, .feature__img p, .swiper__content"
 );
 
 const srBotton = ScrollReveal({
@@ -274,7 +240,7 @@ const srZoom = ScrollReveal({
 });
 
 srLeft.reveal(
-  ".featutre__img-hover, .feature__left, .about__main-img, .about__content, .ourValue__value-text, .portfolio__list-img, .wrapper"
+  ".featutre__img-hover, .feature__left, .about__main-img, .about__content, .ourValue__value-text, .portfolio__list-img, .wrapper, .testimonials__btn"
 );
 
 const srZoomRotate = ScrollReveal({
@@ -288,5 +254,5 @@ const srZoomRotate = ScrollReveal({
 });
 
 srZoomRotate.reveal(
-  ".testimonials__img, .testimonials__user, .blog__post-content, .about__main-img-2, .slider__line, .home__scroll"
+  ".testimonials__img, .blog__post-content, .about__main-img-2, .slider__line, .home__scroll"
 );
