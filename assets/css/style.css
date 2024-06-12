@@ -1143,9 +1143,13 @@ svg {
 }
 
 .portfolio__list-item {
+  background-color: rgba(0, 0, 0, 0);
   padding-bottom: 2cap;
   margin-bottom: 1rem;
   border-bottom: 1px solid #aaa;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .portfolio__list-header {
@@ -1195,6 +1199,7 @@ svg {
 .portfolio__list-content p {
   font-size: 15px;
   font-family: var(--font-text);
+  color: var(--title-color);
 }
 
 .portfolio__list-button {
@@ -1206,6 +1211,7 @@ svg {
   justify-content: center;
   font-size: 2rem;
   cursor: pointer;
+  color: var(--title-color);
 }
 
 .portfolio__list-button:hover {
@@ -1217,7 +1223,6 @@ svg {
   margin-top: 2rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
 }
 
 .portfolio__list-item-text p {
@@ -1517,15 +1522,28 @@ svg {
 
 .faqs__answer {
   display: none;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-top: 1rem;
   border-top: 1px solid #aaa;
   padding-top: 0.5rem;
+  height: 100px;
+  animation: show 0.5s forwards;
 }
 
 .faqs__answer.show {
   display: flex;
-  max-height: 100%;
+  align-items: center;
+  /* max-height: 100%; */
+}
+
+@keyframes show {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100px;
+  }
 }
 
 .faqs__answer p {
@@ -1877,6 +1895,11 @@ svg {
     width: 45%;
   } */
 
+  .portfolio__title-button {
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
+  }
   .wrapper {
     width: 80%;
   }
@@ -2252,6 +2275,7 @@ svg {
   .ourValue__value-text {
     margin-left: 0;
     margin-top: 1rem;
+    text-align: center;
   }
 
   .ourValue__value-text h2 {
@@ -2566,7 +2590,7 @@ svg {
   }
 
   .portfolio__list-item {
-    width: 44.5vh;
+    width: 100%;
   }
 
   .feature__right-butoon,
@@ -2874,7 +2898,7 @@ svg {
   }
 
   .portfolio__list-item {
-    width: 73vh;
+    width: 100%;
   }
 
   .testimonials__container {
@@ -2993,6 +3017,11 @@ svg {
     position: absolute;
     top: -60px;
     right: 0rem;
+  }
+  .portfolio__title-button {
+    margin: 2rem 0;
+    display: block;
+    text-align: center;
   }
 }
 
@@ -3269,7 +3298,7 @@ svg {
   }
 
   .portfolio__list-item {
-    width: 85vh;
+    width: 100%;
   }
 
   .testimonials__img::after {

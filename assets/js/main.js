@@ -32,7 +32,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 const horizontalSwiper = new Swiper(".swiper", {
-  // direction: "horizontal",
+  direction: "horizontal",
   loop: false,
   navigation: {
     nextEl: ".swiper-button-next",
