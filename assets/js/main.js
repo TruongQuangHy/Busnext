@@ -16,6 +16,33 @@ if (navClose) {
   });
 }
 
+//===========SLIDER==================
+
+const swiper = new Swiper(".swiper", {
+  direction: "vertical",
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  mousewheel: true,
+});
+
+// const horizontalSwiper = new Swiper(".swiper", {
+//   // direction: "horizontal",
+//   loop: false,
+
+//   // allowTouchMove: false,
+//   // mousewheel: false,
+// });
+
 // ==========SEARCH============
 
 const search = document.getElementById("search"),
@@ -212,7 +239,7 @@ const srLeft = ScrollReveal({
 });
 
 srLeft.reveal(
-  ".home__desription, .home__slider, .brand__title, .portfolio__title, .newsletter__container h1, .faqs__question, .blog__title-left "
+  ".home__desription, .slider__item, .brand__title, .portfolio__title, .newsletter__container h1, .faqs__question, .blog__title-left "
 );
 
 const srRight = ScrollReveal({
@@ -247,7 +274,7 @@ const srZoom = ScrollReveal({
 });
 
 srLeft.reveal(
-  ".featutre__img-hover, .feature__left, .about__main-img, .about__content, .ourValue__value-text, .portfolio__list-img"
+  ".featutre__img-hover, .feature__left, .about__main-img, .about__content, .ourValue__value-text, .portfolio__list-img, .wrapper"
 );
 
 const srZoomRotate = ScrollReveal({
@@ -261,5 +288,5 @@ const srZoomRotate = ScrollReveal({
 });
 
 srZoomRotate.reveal(
-  ".testimonials__img, .testimonials__user, .blog__post-content, .about__main-img-2"
+  ".testimonials__img, .testimonials__user, .blog__post-content, .about__main-img-2, .slider__line, .home__scroll"
 );
